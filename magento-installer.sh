@@ -44,21 +44,30 @@ read SAMPLE_DATA
 ##############################
 
     echo
-    echo "Now installing Magento with sample data..."
+    echo "Now installing Magento..."
     
-    echo
-    echo "Downloading packages..."
-    echo
+
     
     if [ -f $DOWNLOAD_DIRmagento-$MAGENTO_VERSION.tar.gz ]; then
+        echo
         echo "Already downloaded magento-$MAGENTO_VERSION.tar.gz"
+        echo
     else
+        echo
+        echo "Downloading packages..."
+        echo
         wget http://www.magentocommerce.com/downloads/assets/$MAGENTO_VERSION/magento-$MAGENTO_VERSION.tar.gz -p $DOWNLOAD_DIR
     fi
 
     if [[ $SAMPLE_DATA == 'y' || $SAMPLE_DATA == 'Y' ]]; then
         if [ -f $DOWNLOAD_DIRmagento-sample-data-$MAGENTO_VERSION.tar.gz ]; then
+            echo
             echo "Already downloaded magento-sample-data-$MAGENTO_VERSION.tar.gz"
+            echo
+        else
+            echo
+            echo "Downloading packages..."
+            echo
             wget http://www.magentocommerce.com/downloads/assets/$MAGENTO_VERSION/magento-sample-data-$MAGENTO_VERSION.tar.gz -p $DOWNLOAD_DIR
         fi
     fi
