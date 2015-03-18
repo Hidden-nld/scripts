@@ -75,9 +75,9 @@ read SAMPLE_DATA
     echo "Extracting data..."
     echo
     
-    tar xf $DOWNLOAD_DIRmagento-$MAGENTO_VERSION.tar.gz -C $PWD$DOWNLOAD_DIR
+    tar xf $DOWNLOAD_DIRmagento-$MAGENTO_VERSION.tar.gz -C $PWD
     if [[ $SAMPLE_DATA == 'y' || $SAMPLE_DATA == 'Y' ]]; then
-        tar xf $DOWNLOAD_DIRmagento-sample-data-$MAGENTO_VERSION.tar.gz -C $PWD$DOWNLOAD_DIR
+        tar xf $DOWNLOAD_DIRmagento-sample-data-$MAGENTO_VERSION.tar.gz -C $PWD
     fi
     echo
     echo "Moving files..."
