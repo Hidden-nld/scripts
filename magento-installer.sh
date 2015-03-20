@@ -187,5 +187,11 @@ read SAMPLE_DATA
     echo "| Password: $DBPASS"
     echo "|"
     echo "+=================================================+"
+    if [[ $SAMPLE_DATA == 'y' || $SAMPLE_DATA == 'Y' ]]; then
+        echo "|"
+        echo "| Sample Data installed"
+        echo "|"
+        echo "+=================================================+"
+    fi
     
 exit
